@@ -1,0 +1,328 @@
+﻿Script started on 2020-03-14 20:05:21+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="92" LINES="24"]
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# useradd -e 2020-06-1[K01 -f 3 friend
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# passwd friend
+Новый пароль : 
+Повторите ввод нового пароля : 
+passwd: пароль успешно обновлён
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# su friend
+$ passd ws d
+Смена пароля для friend.
+Действующий пароль: 
+Новый пароль : 
+Повторите ввод нового пароля : 
+passwd: пароль успешно обновлён
+$ su
+Пароль: 
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# chage -E 2020-080[K-14 friend
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# chfn -f Dzmitrii -r 104 -w 2444-2-09 -h 64-5 
+3-73 -o friend
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# usermod -l gi[Kuest friend
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# usermod -d /home/guest guest
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# usermod -d /home/guest guest[K[K[K[K[K
+Использование: usermod [параметры] ПОЛЬЗОВАТЕЛЬ
+
+Параметры:
+  -c, --comment КОММЕНТАРИЙ     новое значение поля GECOS
+  -d, --home ДОМ_КАТ            новый домашний каталог учётной записи
+  -e, --expiredate ДАТА_УСТ     установить дату окончания действия
+                                учётной записи в ДАТА_УСТ
+  -f, --inactive НЕАКТИВНОСТЬ   установить период неактивности пароля после
+                                устаревания учётной записи равным НЕАКТИВНОСТЬ
+  -g, --gid ГРУППА              принудительно назначить первичную ГРУППУ
+  -G, --groups ГРУППЫ           список дополнительных ГРУПП
+  -a, --append                  добавить пользователя в дополнительные
+                                ГРУППЫ, указанные в параметре -G не удаляя
+                                пользователя из других групп
+  -h, --help                    показать данное сообщение и закончить работу
+  -l, --login НОВОЕ_ИМЯ         новое значение имени учётной записи
+  -L, --lock                    заблокировать учётную запись
+  -m, --move-home               переместить содержимое домашнего каталога в
+                                новое место (использовать только вместе с -d)
+  -o, --non-unique              разрешить создание учётной записи с уже
+                                имеющимся (не уникальным) UID
+  -p, --password ПАРОЛЬ         задать новый шифрованный пароль для
+                                учётной записи
+  -R, --root КАТ_CHROOT         каталог, в который выполняется chroot
+  -s, --shell ОБОЛОЧКА          новая регистрационная оболочка для учётной
+                                записи
+  -u, --uid UID                 новый UID для учётной записи
+  -U, --unlock                  разблокировать учётную запись
+  -v, --add-subuids ПЕРВ-ПОСЛ   добавить диапазон подчинённых uid
+  -V, --del-subuids ПЕРВ-ПОСЛ   удалить диапазон подчинённых uid
+  -w, --add-subgids ПЕРВ-ПОСЛ   добавить диапазон подчинённых gid
+  -W, --del-subgids ПЕРВ-ПОСЛ   удалить диапазон подчинённых gid
+  -Z, --selinux-user SEUSER     новое пользовательское сопоставление
+                                SELinux для учётной записи
+
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# usermod -d /home/guest guest
+usermod: изменения не внесены
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# su guest
+$ cd ~
+sh: 1: cd: can't cd to /home/guest
+$ w pwd
+/home/kosti/Рабочий стол
+$ su
+Пароль: 
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# groupadd guest
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# gpasswd -A guest guests
+gpasswd: группа «guests» не существует в /etc/group
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# gpasswd -A guest guests[K
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# gpasswd -A guest guests[9Proupadd guests
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# groupadd guestspasswd -A guest guests
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# group m[K[Kmod -n friends guests
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# groupdel users
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# userdel guest
+userdel: user guest is currently used by process 2471
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# userdel guest-guestrguest guest
+userdel: user guest is currently used by process 2471
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# userdel -r guest[K[K[K[K[Kstudent
+userdel: пользователь «student» не существует
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# userdel -r student[1P student[1P student
+userdel: пользователь «student» не существует
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# su kosto[Ki
+]0;kosti@kosti-VirtualBox: ~/Рабочий стол[01;32mkosti@kosti-VirtualBox[00m:[01;34m~/Рабочий стол[00m$ s[Kclear
+[H[2J[3J]0;kosti@kosti-VirtualBox: ~/Рабочий стол[01;32mkosti@kosti-VirtualBox[00m:[01;34m~/Рабочий стол[00m$ sudo cat shadow
+[sudo] пароль для kosti: 
+cat: shadow: Нет такого файла или каталога
+]0;kosti@kosti-VirtualBox: ~/Рабочий стол[01;32mkosti@kosti-VirtualBox[00m:[01;34m~/Рабочий стол[00m$ cd ~
+]0;kosti@kosti-VirtualBox: ~[01;32mkosti@kosti-VirtualBox[00m:[01;34m~[00m$ cd /etc\[K
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ cd /etc~[Ksudo cat shadow
+root:$6$WmUDP0m3wqFT6Tu9$HotY1LQn4uK8VOTFKII9eOLLCVY3VZaFuGGbrzdta7epaQ4CSvNomOMrBntArHtZzvOdLaKPLJdnffBHWZVk20:18335:0:99999:7:::
+daemon:*:18186:0:99999:7:::
+bin:*:18186:0:99999:7:::
+sys:*:18186:0:99999:7:::
+sync:*:18186:0:99999:7:::
+games:*:18186:0:99999:7:::
+man:*:18186:0:99999:7:::
+lp:*:18186:0:99999:7:::
+mail:*:18186:0:99999:7:::
+news:*:18186:0:99999:7:::
+uucp:*:18186:0:99999:7:::
+proxy:*:18186:0:99999:7:::
+www-data:*:18186:0:99999:7:::
+backup:*:18186:0:99999:7:::
+list:*:18186:0:99999:7:::
+irc:*:18186:0:99999:7:::
+gnats:*:18186:0:99999:7:::
+nobody:*:18186:0:99999:7:::
+systemd-timesync:*:18186:0:99999:7:::
+systemd-network:*:18186:0:99999:7:::
+systemd-resolve:*:18186:0:99999:7:::
+messagebus:*:18186:0:99999:7:::
+syslog:*:18186:0:99999:7:::
+_apt:*:18186:0:99999:7:::
+uuidd:*:18186:0:99999:7:::
+tcpdump:*:18186:0:99999:7:::
+avahi-autoipd:*:18186:0:99999:7:::
+usbmux:*:18186:0:99999:7:::
+rtkit:*:18186:0:99999:7:::
+dnsmasq:*:18186:0:99999:7:::
+cups-pk-helper:*:18186:0:99999:7:::
+speech-dispatcher:!:18186:0:99999:7:::
+kernoops:*:18186:0:99999:7:::
+avahi:*:18186:0:99999:7:::
+saned:*:18186:0:99999:7:::
+nm-openvpn:*:18186:0:99999:7:::
+whoopsie:*:18186:0:99999:7:::
+colord:*:18186:0:99999:7:::
+hplip:*:18186:0:99999:7:::
+geoclue:*:18186:0:99999:7:::
+pulse:*:18186:0:99999:7:::
+gnome-initial-setup:*:18186:0:99999:7:::
+gdm:*:18186:0:99999:7:::
+kosti:$6$Vx9atQBncXw21vpg$XPWG5XO/Qhe8jvpysjtKOeiSMlmJyOyikalxfHbnZQKPzNEqO8kUm0KrouAFnRj.Hy9GvZME51L4vii0bPD9e.:18321:0:99999:7:::
+systemd-coredump:!!:18327::::::
+guest:$6$tcdbS1X/PMmIxKz1$dW8sR.JZYQV1AmNlnRIrgt9T4X1H2ewg.i7Km64CTGx/lX5ihyn7Lytv9ZDPb5Jjdtq/uwGDEoLrkCJEwC0Vl0:18335:0:99999:7:3:18488:
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ 
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ clear
+[H[2J[3J]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo s[Kuseradd -o -u 2--[K[K000 -d /homme/nouser -s /sbin/n 
+ologin -G user<[K,mail test1
+useradd: группа «user» не существует
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo groupadd user
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo groupadd user[K[K[K[Kmail
+groupadd: группа «mail» уже существует
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo groupadd mailuseruseradd -o -u 2000 -d /homme/nouser -s /sbin/nologin -G user,mail test1
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ user[K[K[K[Ksudo useradd test2
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ user[K[K[K[Ksudo usermod -l test3 -d /home/test3 -m test
+usermod: пользователь «test» не существует
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo usermod -l test3 -d /home/test3 -m test2
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo userdel -r test3
+userdel: почтовый ящик test3 (/var/mail/test3) не найден
+userdel: домашний каталог пользователя test3 (/home/test3) не найден
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ userdel test 3
+Использование: userdel [параметры] ПОЛЬЗОВАТЕЛЬ
+
+Параметры:
+  -f, --force                   удалять файлы, даже если они
+                                не принадлежат пользователю
+  -h, --help                    показать данное сообщение и закончить работу
+  -r, --remove                  удалить домашний каталог и почтовый ящик
+  -R, --root КАТ_CHROOT         каталог, в который выполняется chroot
+      --extrausers              Use the extra users database
+  -Z, --selinux-user            удалить все пользовательские сопоставления
+                                SELinux для пользователя
+
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ userdel test 3[K[K3
+userdel: пользователь «test3» не существует
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo useradd test4 $$sudo passwd test4
+Использование: useradd [параметры] ПОЛЬЗОВАТЕЛЬ
+               useradd -D
+               useradd -D [параметры]
+
+Параметры:
+  -b, --base-dir БАЗ_КАТ        базовый каталог для домашнего каталога новой
+                                учётной записи
+  -c, --comment КОММЕНТАРИЙ     поле GECOS новой учётной записи
+  -d, --home-dir ДОМ_КАТ        домашний каталог новой учётной записи
+  -D, --defaults                показать или изменить настройки
+                                по умолчанию для useradd
+  -e, --expiredate ДАТА_УСТ     дата устаревания новой учётной записи
+  -f, --inactive НЕАКТИВНОСТЬ   период неактивности пароля новой учётной записи
+  -g, --gid ГРУППА              имя или ID первичной группы новой
+                                учётной записи
+  -G, --groups ГРУППЫ           список дополнительных групп новой
+                                учётной записи
+  -h, --help                    показать данное сообщение и закончить работу
+  -k, --skel КАБ_ШАБ            использовать альтернативный каталог с шаблонами
+  -K, --key КЛЮЧ=ЗНАЧЕНИЕ       заменить значение по умолчанию
+                                из /etc/login.defs
+  -l, --no-log-init             не добавлять пользователя в базы данных lastlog и
+                                faillog
+  -m, --create-home             создать домашний каталог пользователя
+  -M, --no-create-home          не создавать домашний каталог пользователя
+  -N, --no-user-group           не создавать группу с тем же именем что и у
+                                пользователя
+  -o, --non-unique              разрешить создание пользователей с
+                                повторяющимися (не уникальными) UID
+  -p, --password ПАРОЛЬ         зашифрованный пароль новой учётной записи
+  -r, --system                  создавать системную группу
+  -R, --root КАТ_CHROOT         каталог, в который выполняется chroot
+  -s, --shell ОБОЛОЧКА          регистрационная оболочка новой
+                                учётной записи
+  -u, --uid UID                 пользовательский ID новой учётной записи
+  -U, --user-group              создать группу с тем же именем что и у
+                                пользователя
+  -Z, --selinux-user SEUSER     использовать указанного SEUSER для
+                                пользовательского сопоставления SELinux
+      --extrausers              Use the extra users database
+
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo useradd test4 $$sudo passwd test4
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo useradd test4 $$sudo passwd test4
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo useradd test4 $$sudo passwd test4
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo useradd test4 $$sudo passwd test4
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo useradd test4 $$sudo passwd test4
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo useradd test4 $$sudo passwd test4
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo useradd test4 $$sudo passwd test4
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo useradd test4 $$sudo passwd test4
+[K]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo useradd test4 $$sudo passwd test4[1P[1P[1@&[1@&
+Новый пароль : 
+Повторите ввод нового пароля : 
+Извините, но пароли не совпадают.
+passwd: Ошибка при операциях с маркером проверки подлинности
+passwd: пароль не изменён
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ clear
+[H[2J[3J]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ clearsudo useradd test4 &&sudo passwd test4$$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C&&[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+useradd: пользователь «test4» уже существует
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ userdel t[K-r test 4
+Использование: userdel [параметры] ПОЛЬЗОВАТЕЛЬ
+
+Параметры:
+  -f, --force                   удалять файлы, даже если они
+                                не принадлежат пользователю
+  -h, --help                    показать данное сообщение и закончить работу
+  -r, --remove                  удалить домашний каталог и почтовый ящик
+  -R, --root КАТ_CHROOT         каталог, в который выполняется chroot
+      --extrausers              Use the extra users database
+  -Z, --selinux-user            удалить все пользовательские сопоставления
+                                SELinux для пользователя
+
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ userdel -r test 4[K[K4
+userdel: Permission denied.
+userdel: не удалось заблокировать /etc/passwd; попробуйте ещё раз позже.
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ userdel -r test4[1@s[C[1@u[1@d[1@o[1@ 
+userdel: почтовый ящик test4 (/var/mail/test4) не найден
+userdel: домашний каталог пользователя test4 (/home/test4) не найден
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ clear
+[H[2J[3J]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ clear[Kclearsudo userdel -r test4[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 4sudo useradd test4 &&sudo passwd test4
+Новый пароль : 
+Повторите ввод нового пароля : 
+passwd: пароль успешно обновлён
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo v[Kchage -E 2020-12-31 test4
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo passd[Kwd test4 -d
+passwd: информация об истечении срока действия пароля изменена.
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo passwd test4 -d[Kl
+passwd: информация об истечении срока действия пароля изменена.
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo addgroup --gid 1-[K010 xusers
+Добавляется группа «xusers» (GID 1010) ...
+Готово.
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo adduser root xusers
+Добавляется пользователь «root» в группу «xusers» ...
+Добавление пользователя root в группу xusers
+Готово.
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo groupmod xusers -n yuserss
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo last
+kosti    :0           :0               Sat Mar 14 20:00   still logged in
+reboot   system boot  5.3.0-18-generic Sat Mar 14 19:59   still running
+kosti    :0           :0               Sat Mar 14 19:23 - crash  (00:36)
+reboot   system boot  5.3.0-18-generic Sat Mar 14 19:22   still running
+kosti    :0           :0               Sat Mar 14 11:42 - down   (00:18)
+reboot   system boot  5.3.0-18-generic Sat Mar 14 11:41 - 12:00  (00:19)
+kosti    :0           :0               Thu Mar 12 18:44 - down   (01:38)
+reboot   system boot  5.3.0-18-generic Thu Mar 12 18:43 - 20:23  (01:39)
+kosti    :0           :0               Thu Mar 12 18:20 - down   (00:10)
+reboot   system boot  5.3.0-18-generic Thu Mar 12 18:19 - 18:30  (00:10)
+kosti    :0           :0               Mon Mar  9 12:40 - down   (00:45)
+reboot   system boot  5.3.0-18-generic Mon Mar  9 12:39 - 13:25  (00:46)
+kosti    :0           :0               Sat Mar  7 11:44 - down   (00:49)
+reboot   system boot  5.3.0-18-generic Sat Mar  7 11:43 - 12:33  (00:50)
+kosti    :0           :0               Sat Mar  7 11:15 - crash  (00:28)
+reboot   system boot  5.3.0-18-generic Sat Mar  7 11:14 - 12:33  (01:19)
+kosti    :0           :0               Fri Mar  6 16:11 - down   (00:28)
+reboot   system boot  5.3.0-18-generic Fri Mar  6 16:10 - 16:39  (00:29)
+
+wtmp begins Fri Mar  6 16:10:06 2020
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ sudo last[K[K[K[K[K[K[K[K[Klast -s -14days
+kosti    :0           :0               Sat Mar 14 20:00   still logged in
+reboot   system boot  5.3.0-18-generic Sat Mar 14 19:59   still running
+kosti    :0           :0               Sat Mar 14 19:23 - crash  (00:36)
+reboot   system boot  5.3.0-18-generic Sat Mar 14 19:22   still running
+kosti    :0           :0               Sat Mar 14 11:42 - down   (00:18)
+reboot   system boot  5.3.0-18-generic Sat Mar 14 11:41 - 12:00  (00:19)
+kosti    :0           :0               Thu Mar 12 18:44 - down   (01:38)
+reboot   system boot  5.3.0-18-generic Thu Mar 12 18:43 - 20:23  (01:39)
+kosti    :0           :0               Thu Mar 12 18:20 - down   (00:10)
+reboot   system boot  5.3.0-18-generic Thu Mar 12 18:19 - 18:30  (00:10)
+kosti    :0           :0               Mon Mar  9 12:40 - down   (00:45)
+reboot   system boot  5.3.0-18-generic Mon Mar  9 12:39 - 13:25  (00:46)
+kosti    :0           :0               Sat Mar  7 11:44 - down   (00:49)
+reboot   system boot  5.3.0-18-generic Sat Mar  7 11:43 - 12:33  (00:50)
+kosti    :0           :0               Sat Mar  7 11:15 - crash  (00:28)
+reboot   system boot  5.3.0-18-generic Sat Mar  7 11:14 - 12:33  (01:19)
+kosti    :0           :0               Fri Mar  6 16:11 - down   (00:28)
+reboot   system boot  5.3.0-18-generic Fri Mar  6 16:10 - 16:39  (00:29)
+
+wtmp begins Fri Mar  6 16:10:06 2020
+]0;kosti@kosti-VirtualBox: /etc[01;32mkosti@kosti-VirtualBox[00m:[01;34m/etc[00m$ exit
+exit
+]0;root@kosti-VirtualBox: /home/kosti/Рабочий столroot@kosti-VirtualBox:/home/kosti/Рабочий стол# exit
+
+Script done on 2020-03-14 20:31:32+03:00 [COMMAND_EXIT_CODE="0"]
