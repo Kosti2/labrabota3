@@ -1,1 +1,1 @@
-https://disk.yandex.by/client/disk/Костянко_Дмитрий_ВФ/lab3
+https://yadi.sk/d/Age_kZtexDhcNA
